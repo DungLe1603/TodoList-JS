@@ -1,0 +1,29 @@
+
+.container {  width: 100%; margin: 0;}
+.avatar img { height:70px; width: 70px; margin: 10px; border-radius: 50%; }
+.avatar {color: #fff; font-size: 18px; }
+.topbar { height: 50px;  color:#fff; text-align: center; font-size: 24px; padding: 10px;}
+.topbar, .leftbar { margin: 0 -15px; }
+.part-left .topbar {background-color: #367fa9;}
+.part-right .topbar {background-color: #3c8dbc;}
+.leftbar { background-color: #222d32; }
+/*.actions-li { padding: 15px; margin: 20px 0;  background-color: #fff; }*/
+.actions-li {margin: 20px 0;}
+.actions-li a{padding: 15px 30px;background-color: #fff;}
+.actions-li a:hover { background-color: #eee; }
+
+.action-header { margin-left: -20px !important;}
+.action-header a { color: #000 !important;}
+.task-header { padding-left: 10px !important;}
+.task-li {padding: 10px 30px;}
+.task-li:hover {  background-color: #1a2226;}
+.task-li a{  color: #fff; text-decoration: none;}
+.leftbar-menu { 
+	padding-left: 0;
+    list-style: none; 
+    padding: 30px 0;}
+/*.leftbar-menu a { padding: 5px;}*/
+.task-menu { color: #fff; }
+
+
+	
