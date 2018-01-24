@@ -1,0 +1,32 @@
+.container {  width: 100%; margin: 0;}
+.container-part { 
+	padding: 10px; 0
+	display: block; 
+	width: 650px; 
+	margin: 0 auto; 
+}
+
+h1,h4 { text-align: center; margin: 20px; }
+.button {
+	padding: 10px;
+    width: 104px;
+    margin: 20px;
+    border-radius: 20px;
+}
+.user-info { 
+	width: 550px;
+	margin: 30px; 
+	padding:10px; 
+	border: 1px solid #999;
+}
+
+/*.part-info { line-height: 0; }*/
+.info-name { width: 250px; padding: 0; position: relative; }
+.info-input { 
+	left: 150px;
+    top: -30px;
+    position: relative;
+    width: 300px;
+    padding: 5px;
+}
+.info-button { justify-content: center; position: relative; left: 150px; }

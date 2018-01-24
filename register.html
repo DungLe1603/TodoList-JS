@@ -3,13 +3,14 @@
 <head>
     <title>To do List</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/todo.css">
+    <link rel="stylesheet" type="text/css" href="css/register.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    
-        <div class="col-md-2 col-sm-3 part-left">
+    <script src="js/register.js"></script>
+
+	<div class="col-md-2 col-sm-3 part-left">
             <div class="topbar"> TO DO</div>
             <div class="leftbar">
                 <div class="avatar">
@@ -46,8 +47,8 @@
                     <div class="dropdown">
                         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><span class="glyphicon glyphicon-menu-hamburger"></a>
                         <ul class="dropdown-menu dropdownhover-bottom">
-                          <li><a href="register.html">Register</a></li>
-                          <li><a href="login.html">Login</a></li>
+                          <li><a href="#">Register</a></li>
+                          <li><a href="#">Login</a></li>
                           <li><a href="#">Edit profile info</a></li>
                           <li><a href="#">Change password</a></li>
                           <li><a href="#">Logout</a></li>
@@ -55,55 +56,49 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="todolist not-done">
-                         <h1>Todos</h1>
-                            <input type="text" class="form-control add-todo" placeholder="Add todo">
-                                <button id="checkAll" class="btn btn-success">Mark all as done</button>
-                                
-                                <hr>
-                                <ul id="sortable" class="list-unstyled">
-                                <li class="ui-state-default">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" value="" />Take out the trash</label>
-                                    </div>
-                                </li>
-                                <li class="ui-state-default">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" value="" />Buy bread</label>
-                                    </div>
-                                </li>
-                                <li class="ui-state-default">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" value="" />Teach penguins to fly</label>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="todo-footer">
-                                <strong><span class="count-todos"></span></strong> Items Left
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="todolist">
-                         <h1>Already Done</h1>
-                            <ul id="done-items" class="list-unstyled">
-                                <li>Some item <button class="remove-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-remove"></span></button></li>
-                                
-                            </ul>
-                        </div>
-                    </div>
+            <div class="container-part">
+                <h1>New user registration</h1>
+                <ul>
+                	<li>All files are mendatory, ecepted email</li>
+                	<li>Providing a valid email will be useful if you lose your password.</li>
+                </ul>
+                <div class="user-info">
+                	<h4><strong>User information</strong></h4>
+                	<div class="part-info">
+                		<p class="info-name">Login: </p>
+                		<input class="info-input" type="text" name="">
+                	</div>
+                	<div class="part-info">
+                		<p class="info-name">First name: </p>
+                		<input class="info-input" type="text" name="">
+                	</div>
+                	<div class="part-info">
+                		<p class="info-name">last name: </p>
+                		<input class="info-input" type="text" name="">
+                	</div>
+                	<div class="part-info">
+                		<p class="info-name">E-mail: </p>
+                		<input id="email" class="info-input" type="text" name="">
+                	</div>
+                	<div class="part-info">
+                		<p class="info-name">Password: </p>
+                		<input id="password" class="info-input" type="text" name="">
+                	</div>
+                	<div class="part-info">
+                		<p class="info-name">Verity password: </p>
+                		<input class="info-input" type="text" name="">
+                	</div>
+                	<div class="info-button">
+                		<button class="button" onclick="register()">Submit</button>
+                	    <button class="button">Reset</button>
+                	</div>
+                	
                 </div>
             </div>
         </div>
-   
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/script.js"></script>
+
     <!-- <script src="js/bootstrap.min.js"></script> -->
     <!-- <script src="js/ajax.js"></script> 
     <script src="js/mytodo.js"></script>-->
