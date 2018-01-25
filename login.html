@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>To do List</title>
+    <title>To do List: login</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/todo.css">
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/check.js"></script>
+
 </head>
 <body>
         <div class="col-md-2 col-sm-3 part-left">
@@ -46,9 +53,9 @@
                     <div class="dropdown">
                         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><span class="glyphicon glyphicon-menu-hamburger"></a>
                         <ul class="dropdown-menu dropdownhover-bottom">
-                          <li><a href="#">Register</a></li>
-                          <li><a href="#">Login</a></li>
-                          <li><a href="#">Edit profile info</a></li>
+                          <li><a href="register.html">Register</a></li>
+                          <li><a href="login.html">Login</a></li>
+                          <li><a href="edit-info.html">Edit profile info</a></li>
                           <li><a href="#">Change password</a></li>
                           <li><a href="#">Logout</a></li>
                         </ul>
@@ -61,18 +68,20 @@
                         <!-- <p class="login-header">Login</p>  -->
                         <h1>Login</h1>
                         <div class="input-form">
-                            <div class="part-info">
-                                <p class="info-name">E-mail: </p>
-                                <input id="email" class="info-input" type="input" name="">
-                            </div>
-                            <div class="part-info">
-                                <p class="info-name">Password: </p>
-                                <input id="password" class="info-input" type="input" name="">
-                            </div>
-                        
-                            <p> Remember me in this computer> </p> 
+                            <form id="register-info">
+                                <div class="part-info">
+                                    <p class="info-name">E-mail: </p>
+                                    <input id="email" class="info-input" type="email" name="email">
+                                </div>
+                                <div class="part-info">
+                                    <p class="info-name">Password: </p>
+                                    <input id="password" class="info-input" type="password" name="password">
+                                </div>
+                            </form>
+                           
+                            <p> Remember me in this computer <input type="checkbox" name="checkbox"> </p> 
                             <button class="button">Log In</button> 
-                            <button class="button">Reset</button> 
+                            <button class="button"><a href="index.html"></a> Cencel </button> 
                             <div>You are not a To Do Lists users yet?  <a href="login.html"> Login</a> </div> 
                             <div> <a href="#">Forget</a></div> 
                         </div>
@@ -81,10 +90,5 @@
             </div>
         </div>
    
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/script.js"></script>
-    <!-- <script src="js/bootstrap.min.js"></script> -->
-    <!-- <script src="js/ajax.js"></script> 
-    <script src="js/mytodo.js"></script>-->
 </body>
 </html>

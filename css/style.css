@@ -30,3 +30,6 @@ h1,h4 { text-align: center; margin: 20px; }
     padding: 5px;
 }
 .info-button { justify-content: center; position: relative; left: 150px; }
+.error{
+	color: red;
+}
