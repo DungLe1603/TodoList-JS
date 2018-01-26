@@ -30,7 +30,7 @@ $(document).ready( function () {
 			"username": {
 				required: "Must not be empty!",
 				minlength: "Minimum 4 characters!",
-				maxlength: "Maximum 4 characters!"
+				maxlength: "Maximum 40 characters!"
 			},
 			"firstname": {
 				required: "Must not be empty!"
@@ -43,8 +43,8 @@ $(document).ready( function () {
 			},
 			"password": {
 				required: "Must not be empty!",					
-				minlength: "Minimum 4 characters!",
-				maxlength: "Maximum 4 characters!"
+				minlength: "Minimum 8 characters!",
+				maxlength: "Maximum 40 characters!"
 			},	
 			"repassword": {
 				required: "Must not be empty!",	

@@ -7,25 +7,16 @@ function register() {
   var url = url + "?email=" + email + "&password=" + password;  
 
   xhttp.open("POST", url, true);
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send();
+	xhttp.onreadystatechange = function() {
+	    if (xhttp.readyState == XMLHttpRequest.DONE) {
+	        alert(JSON.parse(xhttp.responseText).errors.full_messages);
 
-  function getSuccessOutput(){
-	$.ajax({
-		type: "post",
-		url: 'https://todo-js-be.herokuapp.com/auth/sign_in',
-		data: {
-            "email": email,
-            "password": password
-        },
-		complete: function(respone) {
-			$('#output').html(respone.responseText);
-		},
-		error: function() {
-			$('#output').html('Bummer: There was an error!');
-		},
-	});
+	    }
+	    else    { 
+	    	alert(JSON.parse(xhttp.responseText).status);
+	    }
+
+	}
 }
-// function cancel(event) {
-//     document.location.href = "./index.html";
-// }
