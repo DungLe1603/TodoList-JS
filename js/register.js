@@ -1,22 +1,29 @@
-function register() {
-  var xhttp = new XMLHttpRequest(); 
-  var url = "https://todo-js-be.herokuapp.com/auth";
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
-  console.log("email = "+email+", pass = "+password);
-  var url = url + "?email=" + email + "&password=" + password;  
+$(document).ready(function(){
+    $("#btn-register").click(function(){
+      var email = $("#email").val();
+      var password = $("#password").val();
+      
+      var request = $.ajax({
+          type: "POST",
+          url: "https://todo-js-be.herokuapp.com/auth/",
+          data: {
+              "email": email,
+              "password": password
+          }
+      });
 
-  xhttp.open("POST", url, true);
-  // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send();
-	xhttp.onreadystatechange = function() {
-	    if (xhttp.readyState == XMLHttpRequest.DONE) {
-	        alert(JSON.parse(xhttp.responseText).errors.full_messages);
+      request.done(function(data, textStatus, jqXHR) {
+        alert("You had a success register! ")
+        console.log(data);
+      });
 
-	    }
-	    else    { 
-	    	alert(JSON.parse(xhttp.responseText).status);
-	    }
-
-	}
-}
+      request.fail(function(jqXHR, textStatus, errorThrown) {
+          console.log("error");
+          alert("There was something wrong!");
+      });
+    });
+    
+    $("#btn-cancel").click(function() {
+        window.location.href = "./register.html";
+    });
+});

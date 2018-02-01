@@ -78,4 +78,10 @@ $(document).ready(function(){
   function removeItem(element){
       $(element).parent().remove();
   }
+  $("#logout").click(function() {
+        console.log(localStorage);
+        localStorage.clear();
+    
+        window.location.href = "./index.html";
+    });
 });

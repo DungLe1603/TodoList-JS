@@ -1,23 +1,43 @@
+$(document).ready(function(){
+    $("#btn-login").click(function(){
+        if ($("#login-info").valid()) {
+            var email = $("#email").val();
+            var password = $("#password").val();
 
-function cancel(){
-  window.location.assign("login.html");
-}
+            var request = $.ajax({
+                type: "POST",
+                url: "https://todo-js-be.herokuapp.com/auth/sign_in",
+                data: {
+                    "email": email,
+                    "password": password
+                }
+            });
 
- function login() {
- //    var xhttp = new XMLHttpRequest(); 
- //    var url = "https://todo-js-be.herokuapp.com/auth/sign_in";
- //    var email = document.getElementById("email").value;
- //    var password = document.getElementById("password").value;
- //    console.log("email = "+email+", pass = "+password);
- //    var url = url + "?email=" + email + "&password=" + password;  
+            request.done(function(data, textStatus, jqXHR) {
+                var uId = jqXHR.getResponseHeader("Uid");
+                var accessToken = jqXHR.getResponseHeader("Access-Token");
+                var client = jqXHR.getResponseHeader("Client");
 
- //    xhttp.open("POST", url, true);
- //    // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
- //    xhttp.send();
- //  	 xhttp.onreadystatechange = function() {
- //  	    if (xhttp.readyState == XMLHttpRequest.DONE) {
- //  	        window.location.assign("todo.html");
- //  	    }
- //    }
-  window.location.assign("todo.html");
-}
+                localStorage.setItem('uId', uId);
+                localStorage.setItem('accessToken', accessToken)
+                localStorage.setItem('client', client);
+
+                console.log(localStorage);
+                window.location.href = "./todo.html"; 
+                alert("Welcome to TodoList!");
+                // console.log(data);
+            });
+
+            request.fail(function(jqXHR, textStatus, errorThrown) {
+                // console.log("error");
+                var error = jqXHR.responseJSON.errors[0];
+                alert(error);
+            });
+        }
+    });
+    
+    //direct to index.html
+    $("#btn-cancel").click(function() {
+        window.location.href = "./login.html";
+    });
+});
