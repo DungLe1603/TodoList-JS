@@ -1,0 +1,14 @@
+.own-lists { text-align: center; margin: 30px auto;}
+#todo-box { 
+	position: absolute;
+	top: 50px;
+	left: 30%;
+	display: block; 
+	padding: 20px; 
+	border: 1px solid #333; 
+	border-style: inherit;
+	width: 400px; 
+	background-color: lightblue; 
+}
+.add-ct { margin: 10px auto; padding: 10px; }
+.box-content { background-color: #fff; }

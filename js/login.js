@@ -23,8 +23,7 @@ $(document).ready(function(){
                 localStorage.setItem('client', client);
 
                 console.log(localStorage);
-                window.location.href = "./todo.html"; 
-                alert("Welcome to TodoList!");
+                window.location.href = "./list-todo.html"; 
                 // console.log(data);
             });
 

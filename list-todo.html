@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To do List: Todo</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/list-todo.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/list-todo.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+        <div class="col-md-2 col-sm-3 part-left">
+            <div class="topbar"> TO DO</div>
+            <div class="leftbar">
+                <div class="">
+                    <ul class="leftbar-menu action-menu">
+                        <li class="actions-li action-header"><a href="#"> Actions</a></li>
+                        <li class="actions-li"><a href="#"> Refresh</a></li>
+                        <li class="actions-li"><a  id="new-list" onclick="AddNew()"> Add a new list</a></li>
+                        <li class="actions-li"><a href="#"> Exit current list</a></li>
+                        <li class="actions-li"><a href="#"> Delete current list</a></li>
+                    </ul>
+                </div>
+                <div class="">
+                    <ul class="leftbar-menu task-menu">
+                        <li class="task-li task-header"><a href="#"> Task list</a></li>
+                        <li class="task-li"><a href="#"> Impotant</a></li>
+                        <li class="task-li"><a href="#"> Waring</a></li>
+                        <li class="task-li"><a href="#"> Information</a></li>
+                        <li class="task-li"><a href="#"> Selected List</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10 col-sm-9 part-right">
+            <div class="topbar">
+                <div class="avatar">
+                    <h4>Welcome  </h4>
+                </div>
+                <div class="navbar">
+                    <div class="dropdown">
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><span class="glyphicon glyphicon-menu-hamburger"></a>
+                        <ul class="dropdown-menu dropdownhover-bottom">
+                          <li><a href="register.html">Register</a></li>
+                          <li><a href="login.html">Login</a></li>
+                          <li><a href="edit-info.html">Edit profile info</a></li>
+                          <li><a href="#">Change password</a></li>
+                          <li><a href="#" id="logout">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="content">
+                <!-- <div class="row">
+                    <div class="col-md-6"  id="add-a-new-list">
+                        <div class="own-lists">
+                         <h1>Your Todo Lists</h1>
+                         <div id="todo-box">
+                             <p class="box-header"> Add a new Todo list</p>
+                             <form class="box-content" id="box-form">
+                                <label class="add-ct">
+                                    <p> Enter the name of todo list </p>
+                                    <input type="text" id="todo-name" name="newtodo">
+                                </label>
+                                 <div class="add-ct">
+                                    <button class="button" id="cancel">Cancel</button>
+                                    <button class="button" id="submit">Submit</button>
+
+                                 </div>
+                                
+                             </form>
+                         </div> -->
+                            <!-- <input type="text" class="form-control add-todo" placeholder="">
+                                <hr>
+                                <ul id="sortables" class="list-unstyled">
+                                </ul> -->
+                    <!--     </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+   
+    
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/list-todo.js"></script>
+    <script src="js/todo.js"></script>
+    
+   </body>
+</html>

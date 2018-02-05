@@ -13,7 +13,8 @@ $(document).ready(function(){
       });
 
       request.done(function(data, textStatus, jqXHR) {
-        alert("You had a success register! ")
+        alert("You had a success register! ");
+        window.location.href = "./list-todo.html"; 
         console.log(data);
       });
 
